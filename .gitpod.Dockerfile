@@ -51,7 +51,7 @@ LABEL dazzle/layer=lang-c
 LABEL dazzle/test=tests/lang-c.yaml
 USER root
 RUN curl -fsSL https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add - \
-    && echo "deb http://apt.llvm.org/disco/ llvm-toolchain-disco main" >> /etc/apt/sources.list.d/llvm.list \
+    && echo "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic main" >> /etc/apt/sources.list.d/llvm.list \
     && apt-get update \
     && apt-get install -yq \
         clang-format \
